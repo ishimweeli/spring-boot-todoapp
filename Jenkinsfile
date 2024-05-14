@@ -8,12 +8,12 @@ pipeline {
                 git 'https://github.com/ishimweeli/spring-boot-todoapp.git'
             }
         }
-        stage('Build') {
-            steps {
-                // Build your project, skipping tests
-                sh 'mvn clean install -DskipTests'
-            }
-        }
+//         stage('Build') {
+//             steps {
+//                 // Build your project, skipping tests
+//                 sh 'mvn clean install -DskipTests'
+//             }
+//         }
         stage('Run Tests') {
             steps {
                 // Run your tests
