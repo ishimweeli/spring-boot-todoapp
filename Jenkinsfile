@@ -23,7 +23,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 // Build Docker image
-                bat 'docker build -t todoApp .'
+                bat 'docker build -t todoapp .'
             }
         }
     }
