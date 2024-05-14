@@ -5,9 +5,9 @@ pipeline {
         stage('build') {
             steps {
                 // Checkout your source code from version control
-//             sh 'mvn clean install'
+            sh 'mvn clean install'
 //             sh 'mvn clean install -DskipTests'
-sh 'echo 1'
+
             }
         }
         stage('Run Tests') {
