@@ -1,0 +1,21 @@
+version: '3'
+services:
+  todo-app:
+    build: .
+    ports:
+      - "7000:7000"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:h2:mem:testdb
+      - SPRING_DATASOURCE_DRIVER_CLASS_NAME=org.h2.Driver
+      - SPRING_DATASOURCE_USERNAME=admin
+      - SPRING_DATASOURCE_PASSWORD=
+      - SPRING_JPA_DATABASE_PLATFORM=org.hibernate.dialect.H2Dialect
+      - SPRING_H2_CONSOLE_ENABLED=true
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      - SPRING_MAIN_ALLOW_CIRCULAR_REFERENCES=true
+      - SPRINGDOC_SWAGGER_UI_DISABLE_SWAGGER_DEFAULT_URL=true
+      - SPRING_THYMELEAF_PREFIX=classpath:/templates/
+      - SPRING_THYMELEAF_CACHE=false
+      - SPRING_THYMELEAF_ENABLED=true
+      - SPRING_THYMELEAF_SUFFIX=.html
+      - SPRING_MAIN_ALLOW_BEAN_DEFINITION_OVERRIDING=true
